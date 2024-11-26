@@ -1,0 +1,26 @@
+[profile]
+name = "basic-profile"
+description = "basic profile for trading algorithm"
+enabled = true
+
+[app]
+host = "localhost:8000"
+stop = "/stop"
+pause = "/pause"
+start = "/start"
+
+[app.health_check]
+route = "/healthcheck"
+poll_delay = 5
+missed_polls_restart = 5
+
+[risk-management]
+enabled = true
+
+[risk-management.trade.loss]
+limit = 4
+action = "liquidate" # stop or pause are available
+
+# [risk-management.trade.profits]
+# limit = 5
+# action = "take-profits" # stop or pause are available

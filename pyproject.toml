@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.10"
 alpaca-py = "0.31.0"
 pytoml = "^0.1.21"
+structlog = "^24.4.0"
 
 
 [build-system]
