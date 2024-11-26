@@ -7,7 +7,9 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
+alpaca-py = "0.31.0"
+pytoml = "^0.1.21"
 
 
 [build-system]
