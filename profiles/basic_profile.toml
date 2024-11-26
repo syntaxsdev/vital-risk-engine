@@ -3,21 +3,21 @@ name = "basic-profile"
 description = "basic profile for trading algorithm"
 enabled = true
 
-[app]
+[profile.app]
 host = "localhost:8000"
 stop = "/stop"
 pause = "/pause"
 start = "/start"
 
-[app.health_check]
+[profile.app.health_check]
 route = "/healthcheck"
 poll_delay = 5
 missed_polls_restart = 5
 
-[risk-management]
+[profile.risk_management]
 enabled = true
 
-[risk-management.trade.loss]
+[profile.risk_management.trade.loss]
 limit = 4
 action = "liquidate" # stop or pause are available
 

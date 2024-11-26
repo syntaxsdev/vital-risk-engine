@@ -1,11 +1,6 @@
 from pydantic import BaseModel
 
 
-class Profile(BaseModel):
-    name: str
-    description: str = None
-    enabled: bool = False
-
 class HealthCheck(BaseModel):
     route: str
     poll_delay: int = 5
@@ -38,3 +33,26 @@ class Trade(BaseModel):
 class RiskManagement(BaseModel):
     enabled: bool = True
     trade: Trade
+
+
+class Profile(BaseModel):
+    name: str
+    description: str = None
+    enabled: bool = False
+    app: App
+    risk_management: RiskManagement | None = None
+
+
+class RMTradeLoss(BaseModel):
+    limit: int
+    action: str
+
+
+class RMTradeProfits(BaseModel):
+    limit: int
+    action: str
+
+
+class Trade(BaseModel):
+    loss: RMTradeLoss | None = None
+    profits: RMTradeProfits | None = None
