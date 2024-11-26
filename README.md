@@ -1,2 +1,2 @@
-# VITAL - Risk Management Strategy for Trading Algorithms
-Volatility Intervention and Trade Adjustment Layer (VITAL)
+# VITAL - Risk Management Strategy
+Volatility Intervention and Trade Analysis Layer (VITAL)
