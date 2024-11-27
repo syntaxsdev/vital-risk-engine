@@ -8,8 +8,14 @@ import asyncio
 
 
 class Vital:
+    """The Vital Engine"""
+
     def __init__(self, profiles: str | list[str] = None):
-        """ """
+        """
+        Create a new Vital Engine
+
+        Args:
+            proiles: list of profile files"""
 
         # Load via profiles/ directory if no list of files are provided
         if not profiles:
@@ -79,7 +85,7 @@ class Vital:
             logger.info("shutdown", details="Shutdown is complete.")
 
     @staticmethod
-    def dettached_monitor(self): ...
+    def detached_monitor(self): ...
 
     @staticmethod
     def analytics(name: str, **kwargs):
